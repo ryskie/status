@@ -90,11 +90,11 @@ AddEventHandler('esx_status:update', function(status, updateArmour, updateHealth
 			['@identifier'] = xPlayer.identifier,
 			['@health'] = tonumber(updateHealth),
 			['@armor'] = tonumber(updateArmour)
+			armor = ['@armor']
 		})	
 	end
-	
-	local arm = ['@armor']		
-	if arm >=100 then
+			
+	if armor >=100 then
 	--Mysql.Async.FetchAll("SELECT playername, armor FROM users WHERE @armor >= 100")
 			print("Ban")
 		else		
